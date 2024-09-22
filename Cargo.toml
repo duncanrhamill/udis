@@ -1,5 +1,9 @@
 [package]
 name = "udis"
+description = "A tiny local service discovery system"
+homepage = "https://github.com/duncanrhamill/udis"
+repository = "https://github.com/duncanrhamill/udis"
+readme = "readme.md"
 version = "0.1.0"
 edition = "2021"
 authors = ["Duncan R Hamill <duncanrhamill@googlemail.com>"]
