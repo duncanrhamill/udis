@@ -11,6 +11,9 @@ license = "MIT"
 licence-file = "LICENSE"
 keywords = ["discovery", "multicast", "mdns"]
 
+[package.metadata.docs.rs]
+all-features = true
+
 [dependencies]
 log = "0.4.22"
 socket2 = { version = "0.5.7", features = ["all"] }

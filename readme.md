@@ -1,5 +1,7 @@
 # `udis` - a tiny local service descovery system
 
+[![Crates.io Version](https://img.shields.io/crates/v/udis)](https://crates.io/crates/udis/0.1.0) [![docs.rs](https://img.shields.io/docsrs/udis)](https://docs.rs/udis/latest/udis/)
+
 There are many service discovery options available out there, but when it comes
 to local service discovery we mainly reach for mDNS. In most cases this is
 great, but sometimes it's nice just to have a really simple solution that isn't
