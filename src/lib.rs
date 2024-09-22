@@ -63,6 +63,7 @@ pub mod sync;
 /// ```no_run
 /// let udis = udis::Udis::new("server")
 ///     .host("hello", 4112)
+///     .expect("Kind or port already hosted on endpoint")
 ///     .build_sync()
 ///     .expect("Failed to build udis endpoint");
 /// ```

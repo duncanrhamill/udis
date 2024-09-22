@@ -38,13 +38,17 @@ to connect their own socket.
 
 Create a server which hosts a "hello" service on port 4112:
 
-```rust
-let udis = udis::Udis::new("server").host("hello", 4112)?.build_sync()?;
+```rust,no_run
+let udis = udis::Udis::new("server")
+    .host("hello", 4112)
+    .expect("Kind or port already hosted by this endpoint")
+    .build_sync()
+    .expect("Failed to build udis endpoint");
 ```
 
 And then create a client which searches for the "hello" service:
 
-```rust
+```rust,no_run
 let udis = udis::Udis::new("client")
     .search("hello")
     .build_sync()
