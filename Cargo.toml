@@ -9,7 +9,7 @@ edition = "2021"
 authors = ["Duncan R Hamill <duncanrhamill@googlemail.com>"]
 license = "MIT"
 licence-file = "LICENSE"
-keywords = ["service discovery", "mDNS"]
+keywords = ["discovery", "multicast", "mdns"]
 
 [dependencies]
 log = "0.4.22"
