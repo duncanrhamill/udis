@@ -1,4 +1,4 @@
-# `udis` - a tiny local service descovery system
+# `udis` - a tiny local service discovery system
 
 [![Crates.io Version](https://img.shields.io/crates/v/udis)](https://crates.io/crates/udis/0.1.0) [![docs.rs](https://img.shields.io/docsrs/udis)](https://docs.rs/udis/latest/udis/)
 

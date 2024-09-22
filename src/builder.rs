@@ -37,7 +37,7 @@ impl Builder {
         self
     }
 
-    /// Make a service available on this endpoing, i.e. say that we are hosting a service.
+    /// Make a service available on this endpoint, i.e. say that we are hosting a service.
     ///
     /// `kind` is the name for the service type, which is hosted on this machine on the given
     /// `port`.

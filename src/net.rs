@@ -31,7 +31,7 @@ mod tests {
     use crate::net::MULTICAST_ADDR;
 
     #[test]
-    fn test_multicasted() {
+    fn test_multicast() {
         assert!(MULTICAST_ADDR.is_multicast());
     }
 }

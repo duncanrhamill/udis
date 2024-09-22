@@ -14,7 +14,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     //
     // There are two types of udis available, sync and async, which you choose with one of the
     // build functions. The async version will spawn a new tokio task and communicate any found
-    // services to this task via channels, using the [`AyncUdis::find_service()`] function.
+    // services to this task via channels, using the [`AsyncUdis::find_service()`] function.
     //
     // The sync version is shown in `client.rs`
     let mut udis = Udis::new("client").search("hello").build_async()?;

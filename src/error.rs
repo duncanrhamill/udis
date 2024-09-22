@@ -43,8 +43,8 @@ pub enum Error {
     FailedToShutdownUdisTask,
 
     #[cfg(feature = "tokio")]
-    #[error("Failed to join the utis background tokio task")]
-    FailedToJoinUtisTask(#[from] tokio::task::JoinError),
+    #[error("Failed to join the udis background tokio task")]
+    FailedToJoinUdisTask(#[from] tokio::task::JoinError),
 
     #[error("Service info channel closed, the udis task has stopped")]
     ServiceInfoChannelClosed,

@@ -101,7 +101,7 @@ async fn async_task(
         }
     }
 
-    // Conver the socket to a tokio one
+    // Convert the socket to a tokio one
     let socket: tokio::net::UdpSocket = tokio::net::UdpSocket::from_std(socket.into())?;
 
     // Build the registry of udis peers
@@ -132,17 +132,17 @@ async fn async_task(
 
             // On some data from the socket process it
             recv_res = socket.recv(&mut buf) => {
-                let recieved = match recv_res {
+                let received = match recv_res {
                     Ok(r) => r,
                     Err(e) => {
-                        error!("Error while receving udis notify messages (will continue): {e}");
+                        error!("Error while receiving udis notify messages (will continue): {e}");
                         continue;
                     }
                 };
 
                 // Decode into a udis struct
                 let peer: Udis =
-                serde_json::from_slice(&buf[..recieved])
+                serde_json::from_slice(&buf[..received])
                     .map_err(Error::FailedToDeserialiseNotifyMsg)?;
 
                 // If its our own notify message ignore it
@@ -171,7 +171,7 @@ async fn async_task(
                 // If the peer has one of the services we're interested in
                 for service in peer.get_wanted_services(&udis) {
                     let Service::Host { kind, port } = service else {
-                        trace!("Non-host service returned by get_watned_services, skipping");
+                        trace!("Non-host service returned by get_wanted_services, skipping");
                         continue;
                     };
 

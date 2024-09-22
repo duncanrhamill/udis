@@ -166,7 +166,7 @@ fn sync_bg_thread(
                 match e.kind() {
                     ErrorKind::TimedOut | ErrorKind::WouldBlock => (),
                     k => error!(
-                        "Error while receving udis notify messages (will continue): ({k:?}) {e}"
+                        "Error while receiving udis notify messages (will continue): ({k:?}) {e}"
                     ),
                 }
                 continue;
@@ -210,7 +210,7 @@ fn sync_bg_thread(
         // If the peer has one of the services we're interested in
         for service in peer.get_wanted_services(&udis) {
             let Service::Host { kind, port } = service else {
-                trace!("Non-host service returned by get_watned_services, skipping");
+                trace!("Non-host service returned by get_wanted_services, skipping");
                 continue;
             };
 
